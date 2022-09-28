@@ -8,15 +8,19 @@ using namespace std;
 
 
 //class declaration
-class Animal {
+class Register {
     public: 
-        Animal(string name, string owner); //constructor
-        ~Animal(); //deconstructor
+        Register(int cash); //constructor
+        ~Register(); //deconstructor
         void printInfo();
+        int takeCash(int amountOwed); //takes payment from user. If overpaid, returns difference. If not enough, will ask for more $
+        
+        
         
     private:
-        string name;
-        string owner;
+        int cash;
+        int amountOwed;
+        
 };
 
 
