@@ -10,13 +10,16 @@ using namespace std;
 //class declaration
 class Dispenser {
     public: 
-        Dispenser(string itemType, int amountOfItems); //constructor
-        ~Dispenser(); //deconstructor
+        Dispenser(string itemType, int amountOfItems, double cost); //constructor
+        //~Dispenser(); //deconstructor
         void printInfo();
+        void dispensed();
+        double getCost();
         
     private:
         string itemType;
         int amountOfItems;
+        double cost;
 };
 
 

@@ -12,7 +12,7 @@ Register::Register(double c) {
 
 }
 
-int takeCash(double amountOwed, double amountPaid, string itemName) {
+int takeCash(double amountOwed, double amountPaid, Dispenser d) {
     
     //calculate the change
     double leftover = amountOwed - amountPaid;
@@ -20,6 +20,8 @@ int takeCash(double amountOwed, double amountPaid, string itemName) {
     //see if they paid the right amount
     if(leftover = 0) { //they paid the exact amount
     
+        //subtract one from the correct dispenser
+        d.dispensed();
         cout << itemName << " dispensed! " << endl;
         
         //add the payment to total cash and print
@@ -44,7 +46,7 @@ int takeCash(double amountOwed, double amountPaid, string itemName) {
         cin >> num;
         
         //call take cash again
-        takeCash(leftover * -1, num, itemName);
+        takeCash(leftover * -1, num, d);
     }
     
     
