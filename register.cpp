@@ -17,27 +17,37 @@ int takeCash(double amountOwed, double amountPaid, string itemName) {
     //calculate the change
     double leftover = amountOwed - amountPaid;
     
+    //see if they paid the right amount
     if(leftover = 0) { //they paid the exact amount
     
         cout << itemName << " dispensed! " << endl;
+        
+        //add the payment to total cash and print
+        cash += amountOwed;
+        cout << "The register has $" << cash << endl;
         
     } else if(leftover > 0) { //they paid too much, need to give change
     
         cout << "Returning $" << leftover << endl;
         
+        //add the payment to total cash and print
+        cash += amountOwed;
+        cout << "The register has $" << cash << endl;
+        
     } else { //they didn't pay enough, ask for more $
         
+        //add the payment to total cash
+        cash += amountPaid;
+    
+        double num;
         cout << "Insert $" << leftover * -1 << ": " << endl;
+        cin >> num;
+        
+        //call take cash again
+        takeCash(leftover * -1, num, itemName);
     }
     
     
     
 }
 
-
-
-//implement printInfo 
-void Animal::printInfo() {
-    cout << "Name: " << name << endl;
-    cout << "Owner: " << owner << endl;
-}
