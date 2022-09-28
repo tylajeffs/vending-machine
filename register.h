@@ -13,7 +13,7 @@ class Register {
     public: 
         Register(double cash); //constructor
         //~Register(); //deconstructor
-        int takeCash(double amountOwed, double amountPaid, Dispenser d); //takes payment from user. If overpaid, returns difference. If not enough, will ask for more $
+        int takeCash(double amountOwed, double amountPaid, Dispenser& d); //takes payment from user. If overpaid, returns difference. If not enough, will ask for more $
         
         
     private:

@@ -16,6 +16,8 @@ void Dispenser::dispensed() {
     
     //subtract one from the items
     amountOfItems--;
+
+    
 }
 
 //implement printInfo 

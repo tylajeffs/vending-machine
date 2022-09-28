@@ -14,6 +14,7 @@ class Dispenser {
         //~Dispenser(); //deconstructor
         void printInfo();
         void dispensed();
+       // void getNumItems();
         double getCost();
         string getItemType();
         

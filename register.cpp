@@ -12,13 +12,15 @@ Register::Register(double c) {
 
 }
 
-int Register::takeCash(double amountOwed, double amountPaid, Dispenser d) {
+int Register::takeCash(double amountOwed, double amountPaid, Dispenser& d) {
     
     //calculate the change
     double leftover = amountOwed - amountPaid;
+    cout << "leftover: "<< leftover << endl;
+    
     
     //see if they paid the right amount
-    if(leftover = 0) { //they paid the exact amount
+    if(leftover == 0) { //they paid the exact amount
     
         //subtract one from the correct dispenser
         d.dispensed();
