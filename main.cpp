@@ -1,8 +1,7 @@
 #include <iostream>
 #include <string>
-
-#include "animal.h"
-
+#include "register.h"
+#include "dispenser.h"
 
 using namespace std;
 

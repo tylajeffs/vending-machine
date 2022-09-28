@@ -8,15 +8,15 @@ using namespace std;
 
 
 //class declaration
-class Animal {
+class Dispenser {
     public: 
-        Animal(string name, string owner); //constructor
-        ~Animal(); //deconstructor
+        Dispenser(string itemType, int amountOfItems); //constructor
+        ~Dispenser(); //deconstructor
         void printInfo();
         
     private:
-        string name;
-        string owner;
+        string itemType;
+        int amountOfItems;
 };
 
 
