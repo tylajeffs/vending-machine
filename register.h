@@ -10,16 +10,15 @@ using namespace std;
 //class declaration
 class Register {
     public: 
-        Register(int cash); //constructor
+        Register(double cash); //constructor
         ~Register(); //deconstructor
         void printInfo();
-        int takeCash(int amountOwed); //takes payment from user. If overpaid, returns difference. If not enough, will ask for more $
+        int takeCash(double amountOwed, double amountPaid, string itemName); //takes payment from user. If overpaid, returns difference. If not enough, will ask for more $
         
         
         
     private:
-        int cash;
-        int amountOwed;
+        double cash;
         
 };
 
