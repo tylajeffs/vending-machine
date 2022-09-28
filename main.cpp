@@ -38,32 +38,90 @@ int main(int argc, char **argv) {
     cout << "Make your selection (-1 to exit) : ";
     cin >> input;
     
-    //figure out which one they want
-    switch(input) {
-        case 1:
-            cout << "Insert $" << chips.getCost() << ": ";
-            break;
+    
+    while (input != -1) {
         
-        case 2: 
-            cout << "Insert $" << rootBeer.getCost() << ": ";
-            break;
+        //figure out which one they want
+        double c;
         
-        case 3:
-            cout << "Insert $" << kitKat.getCost() << ": ";
-            break;
+        switch(input) {
+            case 1:
+                c = chips.getCost();
+                cout << "Insert $" << c << ": ";
+                //get the input of the cost
+                double moneyIn;
+                cin >> moneyIn;
+                
+                vendingMachine.takeCash(c, moneyIn, chips);
+                break;
+            
+            case 2: 
+                c = rootBeer.getCost();
+                cout << "Insert $" << c << ": ";
+                //get the input of the cost
+                double moneyIn;
+                cin >> moneyIn;
+                
+                vendingMachine.takeCash(c, moneyIn, rootBeer);
+                break;
+            
+            case 3:
+                c = kitKat.getCost();
+                cout << "Insert $" << c << ": ";
+                //get the input of the cost
+                double moneyIn;
+                cin >> moneyIn;
+                
+                vendingMachine.takeCash(c, moneyIn, kitKat);
+                break;
+            
+            case 4:
+                c = water.getCost();
+                cout << "Insert $" << c << ": ";
+                //get the input of the cost
+                double moneyIn;
+                cin >> moneyIn;
+                
+                vendingMachine.takeCash(c, moneyIn, water);
+                break;
+            
+            case 5:
+                c = starbursts.getCost();
+                cout << "Insert $" << c << ": ";
+                //get the input of the cost
+                double moneyIn;
+                cin >> moneyIn;
+                
+                vendingMachine.takeCash(c, moneyIn, starbursts);
+                break;
+        }
         
-        case 4:
-            cout << "Insert $" << water.getCost() << ": ";
-            break;
+        //repeat the selection options
+        cout << "1. ";
+        chips.printInfo();
+        cout << "2. ";
+        rootBeer.printInfo();
+        cout << "3. ";
+        kitKat.printInfo();
+        cout << "4. ";
+        water.printInfo();
+        cout << "5. ";
+        starbursts.printInfo();
         
-        case 5:
-            cout << "Insert $" << starbursts.getCost() << ": ";
-            break;
+        //ask if they want anything else
+        cout << "Make your selection (-1 to exit) : ";
+        cin >> input;
+    
+        
     }
     
-    //get the input of the cost
-    double moneyIn;
-    cin >> moneyIn;
+    
+    
+    
+    
+    
+    
+    
     
     
 
