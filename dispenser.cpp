@@ -19,12 +19,16 @@ void Dispenser::dispensed() {
 }
 
 //implement printInfo 
-void Dispenser()::printInfo() {
+void Dispenser::printInfo() {
     
-    cout << itemType << ": $" << cost << "(" << amountOfItems << ") " << endl;
+    cout << itemType << ": $" << cost << " (" << amountOfItems << ") " << endl;
 
 }
 
-double getCost() {
+double Dispenser::getCost() {
     return cost;
+}
+
+string Dispenser::getItemType() {
+    return itemType;
 }

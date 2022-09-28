@@ -15,6 +15,7 @@ class Dispenser {
         void printInfo();
         void dispensed();
         double getCost();
+        string getItemType();
         
     private:
         string itemType;

@@ -12,7 +12,7 @@ Register::Register(double c) {
 
 }
 
-int takeCash(double amountOwed, double amountPaid, Dispenser d) {
+int Register::takeCash(double amountOwed, double amountPaid, Dispenser d) {
     
     //calculate the change
     double leftover = amountOwed - amountPaid;
@@ -22,7 +22,7 @@ int takeCash(double amountOwed, double amountPaid, Dispenser d) {
     
         //subtract one from the correct dispenser
         d.dispensed();
-        cout << itemName << " dispensed! " << endl;
+        cout << d.getItemType()<< " dispensed! " << endl;
         
         //add the payment to total cash and print
         cash += amountOwed;

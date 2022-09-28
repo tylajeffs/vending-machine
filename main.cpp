@@ -43,13 +43,13 @@ int main(int argc, char **argv) {
         
         //figure out which one they want
         double c;
+        double moneyIn;
         
         switch(input) {
             case 1:
                 c = chips.getCost();
                 cout << "Insert $" << c << ": ";
                 //get the input of the cost
-                double moneyIn;
                 cin >> moneyIn;
                 
                 vendingMachine.takeCash(c, moneyIn, chips);
@@ -59,7 +59,6 @@ int main(int argc, char **argv) {
                 c = rootBeer.getCost();
                 cout << "Insert $" << c << ": ";
                 //get the input of the cost
-                double moneyIn;
                 cin >> moneyIn;
                 
                 vendingMachine.takeCash(c, moneyIn, rootBeer);
@@ -69,7 +68,6 @@ int main(int argc, char **argv) {
                 c = kitKat.getCost();
                 cout << "Insert $" << c << ": ";
                 //get the input of the cost
-                double moneyIn;
                 cin >> moneyIn;
                 
                 vendingMachine.takeCash(c, moneyIn, kitKat);
@@ -79,7 +77,6 @@ int main(int argc, char **argv) {
                 c = water.getCost();
                 cout << "Insert $" << c << ": ";
                 //get the input of the cost
-                double moneyIn;
                 cin >> moneyIn;
                 
                 vendingMachine.takeCash(c, moneyIn, water);
@@ -89,7 +86,6 @@ int main(int argc, char **argv) {
                 c = starbursts.getCost();
                 cout << "Insert $" << c << ": ";
                 //get the input of the cost
-                double moneyIn;
                 cin >> moneyIn;
                 
                 vendingMachine.takeCash(c, moneyIn, starbursts);
